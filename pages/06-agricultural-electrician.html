@@ -223,14 +223,14 @@ img.jw-hero-bg{width:100%;height:100%;object-fit:cover;max-width:none}
 .jw-reviews-header{text-align:center;max-width:760px;margin:0 auto 40px}
 .jw-reviews-header h2{font-size:clamp(34px,5vw,64px);font-weight:800;color:var(--jw-text);line-height:1.12;margin:0 0 12px}
 .jw-reviews-header p:not(.jw-section-label){color:var(--jw-muted);font-size:1.05rem;line-height:1.7}
-.jw-reviews-grid{display:grid;grid-template-columns:1fr;max-width:720px;margin:0 auto;gap:24px}
+.jw-reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .jw-review-card{background:#fff;border-radius:16px;padding:36px;box-shadow:0 4px 18px rgba(0,0,0,.06);border-top:4px solid var(--jw-primary);display:flex;flex-direction:column}
-.jw-review-text{font-size:1.15rem;line-height:1.7;margin:0 0 18px;flex:1;color:var(--jw-text);font-style:italic}
+.jw-review-text{font-size:1rem;line-height:1.7;margin:0 0 18px;flex:1;color:var(--jw-text);font-style:italic}
 .jw-review-meta{font-size:14px;color:var(--jw-muted)}
 .jw-review-meta strong{color:var(--jw-text);display:block}
 .jw-reviews-link{text-align:center;margin-top:32px}
 .jw-reviews-link a{color:var(--jw-primary);font-weight:700}
-@media(max-width:900px){.jw-reviews{padding:56px 20px}.jw-review-card{padding:28px}}
+@media(max-width:900px){.jw-reviews-grid{grid-template-columns:1fr;max-width:600px;margin:0 auto}.jw-reviews{padding:56px 20px}.jw-review-card{padding:28px}}
 
 
 .jw-faq{padding:90px 48px;background:#fff}
@@ -359,12 +359,14 @@ img.jw-hero-bg{width:100%;height:100%;object-fit:cover;max-width:none}
   <div class="jw-reviews-header">
     <p class="jw-section-label fade-up">Customer Reviews</p>
     <h2 class="fade-up delay-1">What Our Customers Say</h2>
-    <p class="fade-up delay-2">Our clients' satisfaction is paramount. Here's what one customer had to say about working with J.W Electrical.</p>
+    <p class="fade-up delay-2">Don't just take our word for it. Here's what customers across Dorset say about J.W Electrical on Google.</p>
   </div>
   <div class="jw-reviews-grid">
-    <div class="jw-review-card fade-up delay-1"><p class="jw-review-text">"J.W Electrical provided exceptional service, and their attention to detail was impressive. I highly recommend them for any electrical needs."</p><div class="jw-review-meta"><strong>Robert W</strong>J.W Electrical customer</div></div>
+    <div class="jw-review-card fade-up delay-1"><p class="jw-review-text">"We have had a great experience with J.W electrical and will be using them going forward. They were very quick to respond and very reliable. Definitely recommend!"</p><div class="jw-review-meta"><strong>Saphryn G.</strong>Google review</div></div>
+    <div class="jw-review-card fade-up delay-2"><p class="jw-review-text">"J.W electrical is absolutely epic! Super professional, reasonably priced, and a great job, will definitely be using James again!"</p><div class="jw-review-meta"><strong>Will C.</strong>Google review</div></div>
+    <div class="jw-review-card fade-up delay-3"><p class="jw-review-text">"Professional, friendly, efficient and reliable. Would highly recommend."</p><div class="jw-review-meta"><strong>Matthew J.</strong>Google review</div></div>
   </div>
-  <p class="jw-reviews-link"><a href="https://share.google/38ttVE6QLstd7QR4P" target="_blank" rel="noopener">Read our reviews on Google &rarr;</a></p>
+  <p class="jw-reviews-link"><a href="https://share.google/38ttVE6QLstd7QR4P" target="_blank" rel="noopener">Read all our reviews on Google &rarr;</a></p>
 </div></section>
 
 <section class="jw-faq"><div class="jw-faq-inner">

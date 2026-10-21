@@ -112,7 +112,7 @@ james = img("james-watton-jw-electrical.jpg", "Portrait of James Watton, ideally
 page("01-home.html", "Home", "(front page)", "-", "Electrician in Poole & Dorset | Domestic & Commercial | J.W Electrical",
      "Trusted electrician in Poole covering Bournemouth, Christchurch and Dorset. Domestic, commercial, industrial and agricultural work. Free quotes.",
      "electrician poole",
-     ["hero", "circles", "intro", "about", "why", "services", "ratingstrip", "areas"],
+     ["hero", "circles", "intro", "about", "why", "services", "reviews", "areas"],
      J(hero("Trusted Electrician in <em>Poole</em> &amp; Dorset",
             "Reliable, safety-focused electrical installations for homes, businesses and farms across Poole, Bournemouth and Christchurch.",
             home_hero, "Electrician at work in Poole, Dorset - J.W Electrical Installations",
@@ -131,7 +131,7 @@ page("01-home.html", "Home", "(front page)", "-", "Electrician in Poole & Dorset
              ("shield", "Safety First", "Every installation is planned and carried out with safety at its core, and checked before we leave."),
              ("message", "Friendly &amp; Honest", "Clear advice in plain English, a strong work ethic and absolutely no pressure.")]),
        services_grid(SERVICES, "From a single extra socket to full rewires, industrial containment and farm electrics, here's how we can help."),
-       ratingstrip(),
+       reviews(["veno", "sonia", "will"], h2="Recommended on Google", sub="Here's what customers across Dorset say about working with James."),
        areas()),
      schemas=[dict({"@context": "https://schema.org"}, **business_schema({"description": "Electrician in Poole providing domestic, commercial, industrial and agricultural electrical services across Bournemouth, Christchurch and Dorset."}))])
 
@@ -203,7 +203,7 @@ for n, s in enumerate(SERVICES, 4):
            included(f"What's Included in Our {s['name']} Service", s["inc"]),
            icongrid("Where We Work", s["ig_h2"], s["ig"]),
            why3("Why Choose Us", s["why_h2"], s["why"]),
-           reviews(),
+           reviews(s["reviews"]),
            faq(f"{s['name']} FAQs", s["faq"] + [free_quote_faq()]),
            cta_banner(s["cta"])),
          schemas=[{"@context": "https://schema.org", "@type": "Service", "name": p, "serviceType": p,
@@ -357,18 +357,13 @@ contact_section = f'''<section class="bp-contact" id="contact-form">
 page(f"{nx:02d}-contact-us.html", "Contact Us", "contact-us", "-", "Contact J.W Electrical | Electrician in Poole | Free Quotes",
      "Contact J.W Electrical Installations for a free, no-obligation quote. Call 07742 924814 or send a message. Covering Poole, Bournemouth and Dorset.",
      "contact electrician poole",
-     ["hero", "contact"],
+     ["hero", "contact", "reviews"],
      J(hero("Contact<br><em>J.W Electrical</em>", "Free, competitive quotes for electrical work across Poole, Bournemouth, Christchurch and Dorset.",
             img("contact-jw-electrical-hero.jpg", "CONTACT page hero (landscape, 1920px wide). Shown as a real <img> so the alt text counts for SEO."),
             "J.W Electrical electrician in Poole, Dorset", use_img=True,
             ctas=[btn(f"tel:{PHONE_RAW}", f"Call {PHONE_DISPLAY}", "primary"), btn(U("services"), "Our Services", "secondary")]),
        contact_section,
-       f'''<section class="bp-creviews"><div class="bp-creviews-inner">
-  <p class="bp-section-label fade-up" style="text-align:center">Customer Reviews</p>
-  <h2 class="fade-up delay-1">What Our Customers Say</h2>
-  <div class="bp-creview scale-in delay-2"><p class="bp-creview-text">"{REVIEW_TEXT}"</p><p class="bp-creview-author">{REVIEW_NAME}</p></div>
-  <p class="bp-creviews-link"><a href="{GOOGLE}" target="_blank" rel="noopener">Read our reviews on Google &rarr;</a></p>
-</div></section>''',
+       reviews(["agnieszka", "saphryn", "matthew"]),
        f'''<section class="bp-guarantee"><div class="bp-guarantee-inner fade-up">
   <svg class="bp-guarantee-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M50 5L10 20V50C10 72 28 90 50 95C72 90 90 72 90 50V20L50 5Z" stroke="rgba(255,255,255,0.35)" stroke-width="3" fill="rgba(255,255,255,0.07)"/><path d="M34 50L44 60L66 38" stroke="#C9973F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
   <div><h2>Free, Competitive Quotes on Every Job</h2><p>No hidden extras and no pressure. Call <a href="tel:{PHONE_RAW}">{PHONE_DISPLAY}</a> or send a message today.</p></div>
@@ -398,7 +393,7 @@ def legal(fname, title, slug, label, sub, sections, seo_desc):
 UL = lambda items: "<ul>" + "".join(f"<li>{x}</li>" for x in items) + "</ul>"
 legal(f"{nx:02d}-privacy-policy.html", "Privacy Policy", "privacy-policy", "Your Privacy",
       f"How {BUSINESS} collects, uses and protects your personal information when you use our website or contact us.",
-      [("Who we are", f'<p>{LEGAL} is the data controller for the personal information described in this policy.</p><div class="bp-pp-card"><div><span>Business</span>{BUSINESS}</div><div><span>Owner</span>{OWNER} (sole trader)</div><div><span>Based in</span>{ADDRESS}</div><div><span>Email</span><a href="mailto:{EMAIL}">{EMAIL}</a></div><div><span>Phone</span><a href="tel:{PHONE_RAW}">{PHONE_DISPLAY}</a></div><div><span>ICO registration</span>[TO CONFIRM]</div></div>'),
+      [("Who we are", f'<p>{LEGAL} is the data controller for the personal information described in this policy.</p><div class="bp-pp-card"><div><span>Business</span>{BUSINESS}</div><div><span>Owner</span>{OWNER} (sole trader)</div><div><span>Based in</span>{ADDRESS}</div><div><span>Email</span><a href="mailto:{EMAIL}">{EMAIL}</a></div><div><span>Phone</span><a href="tel:{PHONE_RAW}">{PHONE_DISPLAY}</a></div><div><span>Status</span>Sole trader</div></div>'),
        ("What information we collect", "<p>We only collect the information we need to respond to you and carry out your work:</p>" + UL(["<strong>Enquiry details</strong> such as your name, email address, phone number, postcode and message when you use our contact form, email or call us.", "<strong>Job information</strong> such as the address of the property and details or photos of the work needed.", "<strong>Website usage data</strong> such as pages visited and device type, collected through Google Analytics only if you accept analytics cookies."])),
        ("How we use your information", UL(["To reply to your enquiry and provide a quote.", "To arrange, carry out and invoice for work.", "To keep records of work carried out.", "To understand how our website is used and improve it (analytics, with your consent)."]) + "<p>We will never sell your information or use it for unrelated marketing.</p>"),
        ("Our legal basis", UL(["<strong>Contract:</strong> to quote for and carry out work you have asked for.", "<strong>Legitimate interests:</strong> to reply to enquiries and run our business.", "<strong>Legal obligation:</strong> to keep financial and tax records.", "<strong>Consent:</strong> for optional analytics cookies, which you can withdraw at any time."])),

@@ -317,11 +317,26 @@ def icongrid(label, h2, items):
 </div></section>'''
 
 
-REVIEW_TEXT = "J.W Electrical provided exceptional service, and their attention to detail was impressive. I highly recommend them for any electrical needs."
-REVIEW_NAME = "Robert W"
+REVIEWS = {
+    "veno": ("Veno P.", "James recently carried out excellent electrical work for us on the interior and exterior light set up on our catering trailer, as well as installed electrical sockets with conduits. He was professional throughout and worked within our budget. We would definitely use his services again and highly recommend him."),
+    "saphryn": ("Saphryn G.", "We have had a great experience with J.W electrical and will be using them going forward. They were very quick to respond and very reliable. Definitely recommend!"),
+    "sonia": ("Sonia B.", "Excellent Work, I am very happy with his response &amp; work &amp; kindness &amp; very experienced &amp; Tidy, &amp; very polite, definitely hire him again."),
+    "will": ("Will C.", "J.W electrical is absolutely epic! Super professional, reasonably priced, and a great job, will definitely be using James again!"),
+    "tiago": ("Tiago C.", "James did some electrical work for us. He is an excellent professional and was able to point us in the right direction - would use again."),
+    "agnieszka": ("Agnieszka G.", "Very happy with the comms and work delivered. Very neat and tidy workmanship. Will definitely use again."),
+    "matthew": ("Matthew J.", "Professional, friendly, efficient and reliable. Would highly recommend."),
+    "harrison": ("Harrison P.", "Really knows his wiring. Highly recommend!"),
+    "darren": ("Darren S.", "Great job, good price, on time."),
+}
 
 
-def reviews(h2="What Our Customers Say", sub="Our clients' satisfaction is paramount. Here's what one customer had to say about working with J.W Electrical."):
+def review_cards(keys, cls="bp-review-card"):
+    return "\n    ".join(
+        f'<div class="{cls} fade-up delay-{i+1}"><p class="bp-review-text">"{REVIEWS[k][1]}"</p><div class="bp-review-meta"><strong>{REVIEWS[k][0]}</strong>Google review</div></div>'
+        for i, k in enumerate(keys))
+
+
+def reviews(keys, h2="What Our Customers Say", sub="Don't just take our word for it. Here's what customers across Dorset say about J.W Electrical on Google."):
     return f'''<section class="bp-reviews"><div class="bp-reviews-inner">
   <div class="bp-reviews-header">
     <p class="bp-section-label fade-up">Customer Reviews</p>
@@ -329,9 +344,9 @@ def reviews(h2="What Our Customers Say", sub="Our clients' satisfaction is param
     <p class="fade-up delay-2">{sub}</p>
   </div>
   <div class="bp-reviews-grid">
-    <div class="bp-review-card fade-up delay-1"><p class="bp-review-text">"{REVIEW_TEXT}"</p><div class="bp-review-meta"><strong>{REVIEW_NAME}</strong>{SHORT} customer</div></div>
+    {review_cards(keys)}
   </div>
-  <p class="bp-reviews-link"><a href="{GOOGLE}" target="_blank" rel="noopener">Read our reviews on Google &rarr;</a></p>
+  <p class="bp-reviews-link"><a href="{GOOGLE}" target="_blank" rel="noopener">Read all our reviews on Google &rarr;</a></p>
 </div></section>'''
 
 
@@ -389,14 +404,6 @@ def ctacard(h2):
     {btn(U("contact-us"), "Request a Quote")}
     {btn(f"tel:{PHONE_RAW}", "Call Today", "secondary")}
   </div>
-</div></section>'''
-
-
-def ratingstrip():
-    return f'''<section class="bp-ratingstrip"><div class="fade-up">
-  <h2>What Our Customers Say</h2>
-  <blockquote>"{REVIEW_TEXT}"<cite>{REVIEW_NAME}</cite></blockquote>
-  <a href="{GOOGLE}" class="bp-ratingstrip-link" target="_blank" rel="noopener noreferrer">Read Our Google Reviews</a>
 </div></section>'''
 
 

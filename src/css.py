@@ -323,14 +323,14 @@ C["reviews"] = r"""
 .bp-reviews-header{text-align:center;max-width:760px;margin:0 auto 40px}
 .bp-reviews-header h2{font-size:clamp(34px,5vw,64px);font-weight:800;color:var(--bp-text);line-height:1.12;margin:0 0 12px}
 .bp-reviews-header p:not(.bp-section-label){color:var(--bp-muted);font-size:1.05rem;line-height:1.7}
-.bp-reviews-grid{display:grid;grid-template-columns:1fr;max-width:720px;margin:0 auto;gap:24px}
+.bp-reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .bp-review-card{background:#fff;border-radius:16px;padding:36px;box-shadow:0 4px 18px rgba(0,0,0,.06);border-top:4px solid var(--bp-primary);display:flex;flex-direction:column}
-.bp-review-text{font-size:1.15rem;line-height:1.7;margin:0 0 18px;flex:1;color:var(--bp-text);font-style:italic}
+.bp-review-text{font-size:1rem;line-height:1.7;margin:0 0 18px;flex:1;color:var(--bp-text);font-style:italic}
 .bp-review-meta{font-size:14px;color:var(--bp-muted)}
 .bp-review-meta strong{color:var(--bp-text);display:block}
 .bp-reviews-link{text-align:center;margin-top:32px}
 .bp-reviews-link a{color:var(--bp-primary);font-weight:700}
-@media(max-width:900px){.bp-reviews{padding:56px 20px}.bp-review-card{padding:28px}}
+@media(max-width:900px){.bp-reviews-grid{grid-template-columns:1fr;max-width:600px;margin:0 auto}.bp-reviews{padding:56px 20px}.bp-review-card{padding:28px}}
 """
 
 C["faq"] = r"""

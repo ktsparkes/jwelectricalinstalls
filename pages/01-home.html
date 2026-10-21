@@ -234,13 +234,19 @@ img.jw-hero-bg{width:100%;height:100%;object-fit:cover;max-width:none}
 @media(max-width:768px){.jw-services{padding:70px 18px}.jw-services-header{margin-bottom:40px}.jw-services-header h2{font-size:42px}.jw-services-grid{grid-template-columns:1fr;gap:28px}.jw-services-grid .jw-service-card:last-child:nth-child(odd){grid-column:auto;width:100%}.jw-service-card-img{height:230px}.jw-service-card-body{padding:30px 26px}.jw-service-card h3{font-size:26px}}
 
 
-.jw-ratingstrip{padding:75px 40px;background:#fff;text-align:center}
-.jw-ratingstrip h2{font-size:clamp(26px,3vw,34px);font-weight:800;margin:0 0 22px;color:var(--jw-text)}
-.jw-ratingstrip blockquote{max-width:720px;margin:0 auto 28px;font-size:1.2rem;line-height:1.7;font-style:italic;color:var(--jw-text)}
-.jw-ratingstrip cite{display:block;margin-top:12px;font:700 .85rem var(--jw-font-head);font-style:normal;letter-spacing:.08em;text-transform:uppercase;color:var(--jw-primary)}
-.jw-ratingstrip-link{display:inline-block;border:2px solid var(--jw-primary);border-radius:50px;padding:14px 28px;color:var(--jw-primary)!important;font:700 16px var(--jw-font-head);text-decoration:none!important;transition:.3s}
-.jw-ratingstrip-link:hover{background:var(--jw-primary);color:#fff!important}
-@media(max-width:768px){.jw-ratingstrip{padding:65px 24px 90px}}
+.jw-reviews{background:var(--jw-wash);padding:88px 48px}
+.jw-reviews-inner{max-width:1320px;margin:0 auto}
+.jw-reviews-header{text-align:center;max-width:760px;margin:0 auto 40px}
+.jw-reviews-header h2{font-size:clamp(34px,5vw,64px);font-weight:800;color:var(--jw-text);line-height:1.12;margin:0 0 12px}
+.jw-reviews-header p:not(.jw-section-label){color:var(--jw-muted);font-size:1.05rem;line-height:1.7}
+.jw-reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.jw-review-card{background:#fff;border-radius:16px;padding:36px;box-shadow:0 4px 18px rgba(0,0,0,.06);border-top:4px solid var(--jw-primary);display:flex;flex-direction:column}
+.jw-review-text{font-size:1rem;line-height:1.7;margin:0 0 18px;flex:1;color:var(--jw-text);font-style:italic}
+.jw-review-meta{font-size:14px;color:var(--jw-muted)}
+.jw-review-meta strong{color:var(--jw-text);display:block}
+.jw-reviews-link{text-align:center;margin-top:32px}
+.jw-reviews-link a{color:var(--jw-primary);font-weight:700}
+@media(max-width:900px){.jw-reviews-grid{grid-template-columns:1fr;max-width:600px;margin:0 auto}.jw-reviews{padding:56px 20px}.jw-review-card{padding:28px}}
 
 
 .jw-areas{background:var(--jw-wash);padding:88px 48px}
@@ -382,10 +388,18 @@ img.jw-hero-bg{width:100%;height:100%;object-fit:cover;max-width:none}
   </div>
 </section>
 
-<section class="jw-ratingstrip"><div class="fade-up">
-  <h2>What Our Customers Say</h2>
-  <blockquote>"J.W Electrical provided exceptional service, and their attention to detail was impressive. I highly recommend them for any electrical needs."<cite>Robert W</cite></blockquote>
-  <a href="https://share.google/38ttVE6QLstd7QR4P" class="jw-ratingstrip-link" target="_blank" rel="noopener noreferrer">Read Our Google Reviews</a>
+<section class="jw-reviews"><div class="jw-reviews-inner">
+  <div class="jw-reviews-header">
+    <p class="jw-section-label fade-up">Customer Reviews</p>
+    <h2 class="fade-up delay-1">Recommended on Google</h2>
+    <p class="fade-up delay-2">Here's what customers across Dorset say about working with James.</p>
+  </div>
+  <div class="jw-reviews-grid">
+    <div class="jw-review-card fade-up delay-1"><p class="jw-review-text">"James recently carried out excellent electrical work for us on the interior and exterior light set up on our catering trailer, as well as installed electrical sockets with conduits. He was professional throughout and worked within our budget. We would definitely use his services again and highly recommend him."</p><div class="jw-review-meta"><strong>Veno P.</strong>Google review</div></div>
+    <div class="jw-review-card fade-up delay-2"><p class="jw-review-text">"Excellent Work, I am very happy with his response &amp; work &amp; kindness &amp; very experienced &amp; Tidy, &amp; very polite, definitely hire him again."</p><div class="jw-review-meta"><strong>Sonia B.</strong>Google review</div></div>
+    <div class="jw-review-card fade-up delay-3"><p class="jw-review-text">"J.W electrical is absolutely epic! Super professional, reasonably priced, and a great job, will definitely be using James again!"</p><div class="jw-review-meta"><strong>Will C.</strong>Google review</div></div>
+  </div>
+  <p class="jw-reviews-link"><a href="https://share.google/38ttVE6QLstd7QR4P" target="_blank" rel="noopener">Read all our reviews on Google &rarr;</a></p>
 </div></section>
 
 <section class="jw-areas"><div class="jw-areas-card">

@@ -320,7 +320,10 @@ SERVICES = [
  ),
 ]
 
+REVIEW_PICKS = {'domestic-electrician': ['sonia', 'agnieszka', 'matthew'], 'commercial-electrician': ['veno', 'saphryn', 'matthew'], 'agricultural-electrician': ['saphryn', 'will', 'matthew'], 'house-rewiring': ['agnieszka', 'harrison', 'sonia'], 'lighting-installation': ['veno', 'agnieszka', 'will'], 'additional-sockets': ['veno', 'darren', 'sonia'], 'electrical-fault-finding': ['tiago', 'harrison', 'saphryn'], 'electric-heating': ['will', 'tiago', 'darren'], 'conduit-containment': ['veno', 'harrison', 'darren']}
+
 for s in SERVICES:
+    s["reviews"] = REVIEW_PICKS[s["slug"]]
     plain = s["name"].replace("&amp;", "and")
     s["hero_img"] = img(f'{s["slug"]}-hero.jpg', f'{plain} page - wide hero photo (landscape, 1920px wide). Ideally James on a {plain.lower()} job.')
     s["card_img"] = img(f'{s["slug"]}.jpg', f'{plain} - card/circle photo and "Systems" section (4:3, 1200px wide).')

@@ -207,6 +207,21 @@ img.jw-hero-bg{width:100%;height:100%;object-fit:cover;max-width:none}
 .jw-guarantee a{color:var(--jw-primary-light);font-weight:700}
 @media(max-width:1024px){.jw-contact-inner{grid-template-columns:1fr;gap:44px}}
 @media(max-width:768px){.jw-contact,.jw-creviews,.jw-guarantee{padding-left:22px;padding-right:22px}.jw-contact{padding-top:60px;padding-bottom:60px}.jw-form-wrapper{padding:28px 20px}.jw-guarantee-inner{flex-direction:column;text-align:center}}
+
+
+.jw-reviews{background:var(--jw-wash);padding:88px 48px}
+.jw-reviews-inner{max-width:1320px;margin:0 auto}
+.jw-reviews-header{text-align:center;max-width:760px;margin:0 auto 40px}
+.jw-reviews-header h2{font-size:clamp(34px,5vw,64px);font-weight:800;color:var(--jw-text);line-height:1.12;margin:0 0 12px}
+.jw-reviews-header p:not(.jw-section-label){color:var(--jw-muted);font-size:1.05rem;line-height:1.7}
+.jw-reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.jw-review-card{background:#fff;border-radius:16px;padding:36px;box-shadow:0 4px 18px rgba(0,0,0,.06);border-top:4px solid var(--jw-primary);display:flex;flex-direction:column}
+.jw-review-text{font-size:1rem;line-height:1.7;margin:0 0 18px;flex:1;color:var(--jw-text);font-style:italic}
+.jw-review-meta{font-size:14px;color:var(--jw-muted)}
+.jw-review-meta strong{color:var(--jw-text);display:block}
+.jw-reviews-link{text-align:center;margin-top:32px}
+.jw-reviews-link a{color:var(--jw-primary);font-weight:700}
+@media(max-width:900px){.jw-reviews-grid{grid-template-columns:1fr;max-width:600px;margin:0 auto}.jw-reviews{padding:56px 20px}.jw-review-card{padding:28px}}
 </style>
 <div class="jw-sticky-btns" aria-label="Quick contact options">
   <a href="tel:07742924814" class="jw-sticky-btn jw-sticky-phone" data-label="Call Us" aria-label="Call J.W Electrical Installations"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
@@ -282,11 +297,18 @@ img.jw-hero-bg{width:100%;height:100%;object-fit:cover;max-width:none}
   </div>
 </section>
 
-<section class="jw-creviews"><div class="jw-creviews-inner">
-  <p class="jw-section-label fade-up" style="text-align:center">Customer Reviews</p>
-  <h2 class="fade-up delay-1">What Our Customers Say</h2>
-  <div class="jw-creview scale-in delay-2"><p class="jw-creview-text">"J.W Electrical provided exceptional service, and their attention to detail was impressive. I highly recommend them for any electrical needs."</p><p class="jw-creview-author">Robert W</p></div>
-  <p class="jw-creviews-link"><a href="https://share.google/38ttVE6QLstd7QR4P" target="_blank" rel="noopener">Read our reviews on Google &rarr;</a></p>
+<section class="jw-reviews"><div class="jw-reviews-inner">
+  <div class="jw-reviews-header">
+    <p class="jw-section-label fade-up">Customer Reviews</p>
+    <h2 class="fade-up delay-1">What Our Customers Say</h2>
+    <p class="fade-up delay-2">Don't just take our word for it. Here's what customers across Dorset say about J.W Electrical on Google.</p>
+  </div>
+  <div class="jw-reviews-grid">
+    <div class="jw-review-card fade-up delay-1"><p class="jw-review-text">"Very happy with the comms and work delivered. Very neat and tidy workmanship. Will definitely use again."</p><div class="jw-review-meta"><strong>Agnieszka G.</strong>Google review</div></div>
+    <div class="jw-review-card fade-up delay-2"><p class="jw-review-text">"We have had a great experience with J.W electrical and will be using them going forward. They were very quick to respond and very reliable. Definitely recommend!"</p><div class="jw-review-meta"><strong>Saphryn G.</strong>Google review</div></div>
+    <div class="jw-review-card fade-up delay-3"><p class="jw-review-text">"Professional, friendly, efficient and reliable. Would highly recommend."</p><div class="jw-review-meta"><strong>Matthew J.</strong>Google review</div></div>
+  </div>
+  <p class="jw-reviews-link"><a href="https://share.google/38ttVE6QLstd7QR4P" target="_blank" rel="noopener">Read all our reviews on Google &rarr;</a></p>
 </div></section>
 
 <section class="jw-guarantee"><div class="jw-guarantee-inner fade-up">
