@@ -1,0 +1,10 @@
+/* Centre main menu, logo stays left (Betheme) */
+#Top_bar .container { position: relative; min-height: 110px; }
+#Top_bar .top_bar_left { position: static; }
+#Top_bar .menu_wrapper {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  float: none; pointer-events: none; background: none !important;
+}
+#Top_bar #menu { float: none; pointer-events: auto; }
+#Top_bar #menu > ul { float: none; margin: 0; }

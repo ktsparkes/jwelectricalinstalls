@@ -1,0 +1,33 @@
+/* ========================= BASE ========================= */
+h5 { font-weight: 400; }
+.list_item.lists_3 h4 { font-size: 18px; line-height: 22px; }
+a.button_large .button_label { font-weight: 700; }
+
+/* ========================= HEADER / MENU ========================= */
+body:not(.template-slider) #Header_wrapper{ background-image:none; background-color:#ffffff !important; }
+#Subheader{ height:0 !important; min-height:0 !important; padding:0 !important; margin:0 !important; overflow:hidden !important; border:0 !important; }
+#Top_bar{ background-color:#ffffff !important; padding-top:4px !important; padding-bottom:4px !important; }
+#Top_bar #logo img{ max-height:130px !important; height:auto !important; width:auto !important; }
+
+/* ========================= SIDEBAR ========================= */
+.widget > h3{ font-size:23px; line-height:26px; margin-top:10px; }
+.widget-area:before, .widget:after{ display:none; }
+
+/* ========================= FOOTER ========================= */
+#Footer .footer_copy{ background:#111111; }
+#Footer .widgets_wrapper{ padding:50px 0; }
+
+/* ========================= MOBILE ========================= */
+@media only screen and (max-width: 767px){
+  #Top_bar #logo img{ max-height:70px !important; }
+  #Top_bar .menu > li > a{ padding-top:14px !important; padding-bottom:14px !important; }
+  #Content .sections_group > .section:first-child{ padding-top:60px !important; }
+}
+
+/* ========================= MENU TWEAKS ========================= */
+#Top_bar .menu_wrapper, #Top_bar .top_bar_right{ position:relative; top:14px !important; }
+#Top_bar .menu > li > a:after, #Top_bar .menu > li > a:before,
+#Top_bar .menu > li.current-menu-item > a:after, #Top_bar .menu > li.current-menu-item > a:before,
+#Top_bar .menu > li:hover > a:after, #Top_bar .menu > li:hover > a:before{ display:none !important; content:none !important; }
+#Top_bar .menu > li > a{ padding-top:14px !important; padding-bottom:6px !important; line-height:1.2 !important; }
+#Top_bar .menu > li > a:hover, #Top_bar .menu > li.current-menu-item > a{ border-bottom-color:currentColor; }
