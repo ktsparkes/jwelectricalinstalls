@@ -16,8 +16,8 @@ def link(slug):
 names = set()
 for f in files:
     h = open(f).read()
-    names |= set(re.findall(re.escape(UPLOADS) + r"([\w\-\.]+)", h))
-    h = h.replace(UPLOADS, "img/")
+    names |= set(re.findall(r"/wp-content/uploads/\d{4}/\d{2}/([\w\-\.]+)", h))
+    h = re.sub(r"/wp-content/uploads/\d{4}/\d{2}/", "img/", h)
     h = re.sub(re.escape(BASE) + r"/([\w\-/]*)", lambda m: link(m.group(1)), h)
     h = re.sub(r'href="/([\w\-]+)/"', lambda m: f'href="{link(m.group(1))}"', h)
     nav = "".join(f'<a href="{link(s)}">{t}</a>' for t, s in NAV)
@@ -27,7 +27,7 @@ for f in files:
 <div class="pv"><b>J.W Electrical</b><nav>{nav}<a class="tel" href="tel:07742924814">07742 924814</a></nav></div>'''
     foot = '<div style="background:#1C1C1C;color:#ccc;padding:40px 24px;text-align:center;font-size:14px">Footer (contact form + Get In Touch widgets go here on WordPress) | <a style="color:#C9973F" href="23-privacy-policy.html">Privacy</a> | <a style="color:#C9973F" href="24-cookie-policy.html">Cookies</a></div></body></html>'
     open(os.path.join(P, os.path.basename(f)), "w").write(head + h + foot)
-for i, n in enumerate(sorted(names)):
+for i, n in enumerate(sorted(n for n in names if not os.path.exists(os.path.join(P, "img", n)))):
     im = Image.new("RGB", (800, 600), (60 + i * 9 % 50, 52 + i * 7 % 40, 40 + i * 5 % 30))
     d = ImageDraw.Draw(im); d.text((24, 24), "PHOTO: " + n, fill=(220, 200, 160))
     im.save(os.path.join(P, "img", n), "PNG" if n.endswith(".png") else "JPEG", quality=60)

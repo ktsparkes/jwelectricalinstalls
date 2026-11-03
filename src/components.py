@@ -2,11 +2,16 @@
 import json
 from config import *
 
-IMAGES = {}  # filename -> description (collected for IMAGES-NEEDED.md)
+IMAGES = {}  # slot -> description (collected for IMAGES-NEEDED.md)
 
 
-def img(name, desc):
-    IMAGES.setdefault(name, desc)
+def img(name, desc=""):
+    if desc:
+        IMAGES.setdefault(name, desc)
+    if name in PHOTOS:
+        return UPLOADED + PHOTOS[name]
+    if name in STANDINS:
+        return UPLOADED + STANDINS[name]
     return UPLOADS + name
 
 
@@ -434,7 +439,7 @@ def business_schema(extra=None):
         "telephone": PHONE_E164,
         "email": EMAIL,
         "image": img("jw-electrical-logo.png", "Logo (also upload in BeTheme Theme Options > Header > Logo). PNG with transparent background, at least 600px wide."),
-        "logo": UPLOADS + "jw-electrical-logo.png",
+        "logo": img("jw-electrical-logo.png"),
         "founder": {"@type": "Person", "name": OWNER},
         "foundingDate": "2022",
         "address": {"@type": "PostalAddress", "addressLocality": "Poole", "addressRegion": "Dorset", "postalCode": POSTCODE, "addressCountry": "GB"},

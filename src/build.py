@@ -157,7 +157,7 @@ page("02-about.html", "About", "about", "-", "About J.W Electrical | James Watto
                    ["James is the owner and lead electrical contractor at J.W Electrical. He personally handles every job, from the first conversation to the final check.",
                     "Known for his friendly approach, strong work ethic and attention to detail, James takes pride in leaving every customer with safe, tidy electrics and clear advice."],
                    [("2022", "Founded"), ("Poole", "Based in Dorset"), ("4", "Sectors covered"), ("Free", "Quotes on every job")],
-                   james, "James Watton, owner of J.W Electrical Installations, Poole", "2022", "Est."),
+                   img("james-watton-about.jpg", "About page portrait of James (portrait)."), "James Watton, owner of J.W Electrical Installations, Poole", "2022", "Est."),
        why3("What Makes Us Different", "Small Business, Big Standards",
             [("user", "You Deal With James", "No call centre and no subcontractors. The person who quotes is the person who does the work."),
              ("check", "Attention to Detail", "Neat, careful workmanship and a tidy finish on every job."),
@@ -166,9 +166,10 @@ page("02-about.html", "About", "about", "-", "About J.W Electrical | James Watto
        areas()))
 
 # ============================== SERVICES HUB ==============================
-mosaic = [(img(f"project-{i}.jpg", f"Recent work photo {i} for the Services page mosaic (photos 1 and 6 show wide: landscape 1600px; others 4:3 1200px). Can reuse case study photos."),
-           f"Recent electrical work by J.W Electrical in Dorset ({i})", t, d)
-          for i, (t, d) in enumerate([("[PROJECT TITLE]", "[Place, Dorset]")] * 6, 1)]
+MOSAIC = [("Studio LED &amp; Pendant Lighting", "Domestic lighting"), ("Catering Trailer Control Box", "Commercial"),
+          ("New Build Electrics", "Domestic"), ("Vaulted Ceiling Downlights", "Lighting installation"),
+          ("Catering Trailer Switch Panel", "Commercial wiring"), ("Commercial Cable Tray &amp; Containment", "Commercial &amp; industrial")]
+mosaic = [(img(f"project-{i}.jpg", f"Services page mosaic photo {i}"), f"{t} by J.W Electrical, Dorset", t, d) for i, (t, d) in enumerate(MOSAIC, 1)]
 page("03-services.html", "Services", "services", "-", "Electrical Services Poole & Dorset | J.W Electrical",
      "Domestic, commercial, industrial and agricultural electrical services in Poole, Bournemouth, Christchurch and Dorset. Rewires, lighting, sockets and more.",
      "electrical services poole",
@@ -265,8 +266,8 @@ page(f"{nx:02d}-project-TEMPLATE.html", "[Project Title]", "projects/[place-job-
   <p class="fade-up delay-3">We carry out [service] across [Place], Poole, Bournemouth and Dorset. See our <a href="{U('services')}">electrical services</a> or <a href="{U('contact-us')}">get a free quote</a>.</p>
 </div></section>''',
        f'''<section class="bp-projgallery"><div class="bp-projgallery-grid">
-  <div class="bp-projgallery-item scale-in delay-1"><img src="{UPLOADS}project-1.jpg" alt="[Photo description, job + place]" loading="lazy"></div>
-  <div class="bp-projgallery-item scale-in delay-2"><img src="{UPLOADS}project-2.jpg" alt="[Photo description, job + place]" loading="lazy"></div>
+  <div class="bp-projgallery-item scale-in delay-1"><img src="{img('project-1.jpg')}" alt="[Photo description, job + place]" loading="lazy"></div>
+  <div class="bp-projgallery-item scale-in delay-2"><img src="{img('project-2.jpg')}" alt="[Photo description, job + place]" loading="lazy"></div>
 </div></section>''',
        f'''<section class="bp-projhighlight"><div class="bp-projhighlight-inner fade-up">
   <div class="bp-projhighlight-icon">{icon("zap",34,1.8)}</div>
@@ -600,24 +601,31 @@ For each page: paste into Rank Math > SEO title, Description and Focus Keyword. 
 5. **Directories** - consistent name, phone and area on Checkatrade/Bark/Yell etc. if he uses them.
 """))
 
-img_rows = "\n".join(f"| `{k}` | {v} |" for k, v in IMAGES.items() if v)
+need = {k: v for k, v in IMAGES.items() if k not in PHOTOS and k not in STANDINS}
+stand = "\n".join(f"| `{k}` | `{v}` |" for k, v in STANDINS.items())
+done = "\n".join(f"| `{k}` | `{v}` |" for k, v in PHOTOS.items())
+needrows = "\n".join(f"| `{k}` | {v} |" for k, v in need.items())
 with open(os.path.join(ROOT, "IMAGES-NEEDED.md"), "w") as f:
-    f.write(finalise(f"""# Images and logo needed
+    f.write(finalise(f"""# Images - status
 
-Upload to WordPress Media in **October 2026** with these **exact filenames** and every page picks them up automatically (pages point to `{UPLOADS}<filename>`).
-If you upload in a different month, change `UPLOADS` in `src/config.py` and rebuild, or find-and-replace `/2026/10/` in the page files.
+Photos live in `{UPLOADED}` (uploaded November 2026). Pages already point to them.
 
-**Tips**
-- Real photos of James's own work beat stock every time (Google and customers both notice)
-- Compress before upload (under 300 KB each) - TinyPNG or Squoosh
-- The same photo can be used for more than one filename if he doesn't have enough; just save copies with each name
-- Never use images found on Google/Canva without checking the licence
-
-**Minimum to launch:** logo, home hero, James portrait, contact hero, and the 9 service `card` photos. Everything else can follow.
-
-| Filename | What it's for |
+## Still needed
+| Slot | What it's for |
 |---|---|
-{img_rows}
+{needrows}
+
+## Stand-ins to replace when better photos arrive
+Upload the new photo, then tell Claude the filename and which slot it fills.
+
+| Slot | Currently using |
+|---|---|
+{stand}
+
+## Done
+| Slot | Photo |
+|---|---|
+{done}
 """))
 
-print(f"Built {len(PAGES)} pages, {len([v for v in IMAGES.values() if v])} images listed.")
+print(f"Built {len(PAGES)} pages, {len(need)} images still needed.")

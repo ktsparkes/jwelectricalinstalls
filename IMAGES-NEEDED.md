@@ -1,62 +1,65 @@
-# Images and logo needed
+# Images - status
 
-Upload to WordPress Media in **October 2026** with these **exact filenames** and every page picks them up automatically (pages point to `/wp-content/uploads/2026/10/<filename>`).
-If you upload in a different month, change `UPLOADS` in `src/config.py` and rebuild, or find-and-replace `/2026/10/` in the page files.
+Photos live in `/wp-content/uploads/2026/11/` (uploaded November 2026). Pages already point to them.
 
-**Tips**
-- Real photos of James's own work beat stock every time (Google and customers both notice)
-- Compress before upload (under 300 KB each) - TinyPNG or Squoosh
-- The same photo can be used for more than one filename if he doesn't have enough; just save copies with each name
-- Never use images found on Google/Canva without checking the licence
-
-**Minimum to launch:** logo, home hero, James portrait, contact hero, and the 9 service `card` photos. Everything else can follow.
-
-| Filename | What it's for |
+## Still needed
+| Slot | What it's for |
 |---|---|
-| `domestic-electrician-hero.jpg` | Domestic Electrician page - wide hero photo (landscape, 1920px wide). Ideally James on a domestic electrician job. |
-| `domestic-electrician.jpg` | Domestic Electrician - card/circle photo and "Systems" section (4:3, 1200px wide). |
-| `domestic-electrician-detail.jpg` | Domestic Electrician - close-up detail of finished work (4:3, 1200px wide). |
-| `commercial-electrician-hero.jpg` | Commercial and Industrial Electrician page - wide hero photo (landscape, 1920px wide). Ideally James on a commercial and industrial electrician job. |
-| `commercial-electrician.jpg` | Commercial and Industrial Electrician - card/circle photo and "Systems" section (4:3, 1200px wide). |
-| `commercial-electrician-detail.jpg` | Commercial and Industrial Electrician - close-up detail of finished work (4:3, 1200px wide). |
-| `agricultural-electrician-hero.jpg` | Agricultural Electrician page - wide hero photo (landscape, 1920px wide). Ideally James on a agricultural electrician job. |
-| `agricultural-electrician.jpg` | Agricultural Electrician - card/circle photo and "Systems" section (4:3, 1200px wide). |
-| `agricultural-electrician-detail.jpg` | Agricultural Electrician - close-up detail of finished work (4:3, 1200px wide). |
-| `house-rewiring-hero.jpg` | Full and Partial Rewires page - wide hero photo (landscape, 1920px wide). Ideally James on a full and partial rewires job. |
-| `house-rewiring.jpg` | Full and Partial Rewires - card/circle photo and "Systems" section (4:3, 1200px wide). |
-| `house-rewiring-detail.jpg` | Full and Partial Rewires - close-up detail of finished work (4:3, 1200px wide). |
-| `lighting-installation-hero.jpg` | Lighting Installation page - wide hero photo (landscape, 1920px wide). Ideally James on a lighting installation job. |
-| `lighting-installation.jpg` | Lighting Installation - card/circle photo and "Systems" section (4:3, 1200px wide). |
-| `lighting-installation-detail.jpg` | Lighting Installation - close-up detail of finished work (4:3, 1200px wide). |
-| `additional-sockets-hero.jpg` | Additional Sockets and Power Points page - wide hero photo (landscape, 1920px wide). Ideally James on a additional sockets and power points job. |
-| `additional-sockets.jpg` | Additional Sockets and Power Points - card/circle photo and "Systems" section (4:3, 1200px wide). |
-| `additional-sockets-detail.jpg` | Additional Sockets and Power Points - close-up detail of finished work (4:3, 1200px wide). |
-| `electrical-fault-finding-hero.jpg` | Cabling and Fault Finding page - wide hero photo (landscape, 1920px wide). Ideally James on a cabling and fault finding job. |
-| `electrical-fault-finding.jpg` | Cabling and Fault Finding - card/circle photo and "Systems" section (4:3, 1200px wide). |
-| `electrical-fault-finding-detail.jpg` | Cabling and Fault Finding - close-up detail of finished work (4:3, 1200px wide). |
-| `electric-heating-hero.jpg` | Electric Heating and Controls page - wide hero photo (landscape, 1920px wide). Ideally James on a electric heating and controls job. |
-| `electric-heating.jpg` | Electric Heating and Controls - card/circle photo and "Systems" section (4:3, 1200px wide). |
-| `electric-heating-detail.jpg` | Electric Heating and Controls - close-up detail of finished work (4:3, 1200px wide). |
-| `conduit-containment-hero.jpg` | Conduit and Containment page - wide hero photo (landscape, 1920px wide). Ideally James on a conduit and containment job. |
-| `conduit-containment.jpg` | Conduit and Containment - card/circle photo and "Systems" section (4:3, 1200px wide). |
-| `conduit-containment-detail.jpg` | Conduit and Containment - close-up detail of finished work (4:3, 1200px wide). |
-| `electrician-poole.jpg` | Poole page hero - a recognisable Poole scene or a local job photo (landscape, 1920px wide). Use your own/licensed photos only. |
-| `electrician-bournemouth.jpg` | Bournemouth page hero - a recognisable Bournemouth scene or a local job photo (landscape, 1920px wide). Use your own/licensed photos only. |
-| `electrician-christchurch.jpg` | Christchurch page hero - a recognisable Christchurch scene or a local job photo (landscape, 1920px wide). Use your own/licensed photos only. |
-| `electrician-wimborne.jpg` | Wimborne page hero - a recognisable Wimborne scene or a local job photo (landscape, 1920px wide). Use your own/licensed photos only. |
-| `electrician-ferndown.jpg` | Ferndown page hero - a recognisable Ferndown scene or a local job photo (landscape, 1920px wide). Use your own/licensed photos only. |
-| `electrician-broadstone.jpg` | Broadstone page hero - a recognisable Broadstone scene or a local job photo (landscape, 1920px wide). Use your own/licensed photos only. |
-| `electrician-dorset.jpg` | Dorset page hero - a recognisable Dorset scene or a local job photo (landscape, 1920px wide). Use your own/licensed photos only. |
-| `electrician-poole-dorset-hero.jpg` | HOME page hero - best overall photo: James at work or a stunning finished job (landscape, 1920px wide). Most important image on the site. |
-| `james-watton-jw-electrical.jpg` | Portrait of James Watton, ideally in work gear on site (portrait 4:5, at least 1000px wide). Used on Home and About. |
 | `jw-electrical-logo.png` | Logo (also upload in BeTheme Theme Options > Header > Logo). PNG with transparent background, at least 600px wide. |
-| `about-jw-electrical-hero.jpg` | ABOUT page hero - James on site or the van/tools (landscape, 1920px wide). |
-| `jw-electrical-at-work.jpg` | ABOUT page 'Our Story' - James working, or van/tools (4:3, 1200px wide). |
-| `project-1.jpg` | Recent work photo 1 for the Services page mosaic (photos 1 and 6 show wide: landscape 1600px; others 4:3 1200px). Can reuse case study photos. |
-| `project-2.jpg` | Recent work photo 2 for the Services page mosaic (photos 1 and 6 show wide: landscape 1600px; others 4:3 1200px). Can reuse case study photos. |
-| `project-3.jpg` | Recent work photo 3 for the Services page mosaic (photos 1 and 6 show wide: landscape 1600px; others 4:3 1200px). Can reuse case study photos. |
-| `project-4.jpg` | Recent work photo 4 for the Services page mosaic (photos 1 and 6 show wide: landscape 1600px; others 4:3 1200px). Can reuse case study photos. |
-| `project-5.jpg` | Recent work photo 5 for the Services page mosaic (photos 1 and 6 show wide: landscape 1600px; others 4:3 1200px). Can reuse case study photos. |
-| `project-6.jpg` | Recent work photo 6 for the Services page mosaic (photos 1 and 6 show wide: landscape 1600px; others 4:3 1200px). Can reuse case study photos. |
-| `electrical-services-hero.jpg` | SERVICES page hero (landscape, 1920px wide). |
-| `contact-jw-electrical-hero.jpg` | CONTACT page hero (landscape, 1920px wide). Shown as a real <img> so the alt text counts for SEO. |
+
+## Stand-ins to replace when better photos arrive
+Upload the new photo, then tell Claude the filename and which slot it fills.
+
+| Slot | Currently using |
+|---|---|
+| `agricultural-electrician-hero.jpg` | `james-outdoor-standing-hero.webp` |
+| `agricultural-electrician.jpg` | `industrial-fused-isolator-power-sockets.webp` |
+| `agricultural-electrician-detail.jpg` | `electrical-control-panel-cable-wiring.webp` |
+| `electric-heating-hero.jpg` | `james-inspecting-consumer-unit.webp` |
+| `electric-heating.jpg` | `vaulted-ceiling-led-strip-pendant-lighting.webp` |
+| `electric-heating-detail.jpg` | `modern-consumer-unit-circuit-breakers.webp` |
+| `additional-sockets-detail.jpg` | `kitchen-pendant-lighting-installation.webp` |
+| `conduit-containment-detail.jpg` | `industrial-fused-isolator-power-sockets.webp` |
+| `electrician-poole.jpg` | `kitchen-pendant-lighting-installation.webp` |
+| `electrician-bournemouth.jpg` | `vaulted-ceiling-recessed-spotlights.webp` |
+| `electrician-christchurch.jpg` | `james-installing-ceiling-light.webp` |
+| `electrician-wimborne.jpg` | `house-rewiring-first-fix-cables.webp` |
+| `electrician-ferndown.jpg` | `commercial-ceiling-cable-tray-installation.webp` |
+| `electrician-broadstone.jpg` | `james-installing-black-socket.webp` |
+| `electrician-dorset.jpg` | `james-first-fix-rewiring.webp` |
+
+## Done
+| Slot | Photo |
+|---|---|
+| `electrician-poole-dorset-hero.jpg` | `james-outdoor-standing-hero.webp` |
+| `james-watton-jw-electrical.jpg` | `james-arms-crossed-original-best.webp` |
+| `james-watton-about.jpg` | `james-about-portrait-black-tshirt.webp` |
+| `about-jw-electrical-hero.jpg` | `james-installing-ceiling-light.webp` |
+| `jw-electrical-at-work.jpg` | `james-first-fix-rewiring.webp` |
+| `electrical-services-hero.jpg` | `vaulted-ceiling-led-strip-pendant-lighting.webp` |
+| `contact-jw-electrical-hero.jpg` | `james-installing-black-socket.webp` |
+| `domestic-electrician-hero.jpg` | `kitchen-pendant-lighting-installation.webp` |
+| `domestic-electrician.jpg` | `residential-renovation-project-exterior.webp` |
+| `domestic-electrician-detail.jpg` | `Clutter-free-room-with-matte-black-sockets.png` |
+| `commercial-electrician-hero.jpg` | `commercial-electrician-first-fix-cabling.webp` |
+| `commercial-electrician.jpg` | `electrical-control-box-wiring-terminations.webp` |
+| `commercial-electrician-detail.jpg` | `industrial-fused-isolator-power-sockets.webp` |
+| `house-rewiring-hero.jpg` | `james-first-fix-rewiring.webp` |
+| `house-rewiring.jpg` | `house-rewiring-first-fix-cables.webp` |
+| `house-rewiring-detail.jpg` | `modern-consumer-unit-circuit-breakers.webp` |
+| `lighting-installation-hero.jpg` | `james-installing-ceiling-light.webp` |
+| `lighting-installation.jpg` | `vaulted-ceiling-recessed-spotlights.webp` |
+| `lighting-installation-detail.jpg` | `vaulted-ceiling-led-strip-pendant-lighting.webp` |
+| `additional-sockets-hero.jpg` | `james-installing-black-socket.webp` |
+| `additional-sockets.jpg` | `Clutter-free-room-with-matte-black-sockets.png` |
+| `electrical-fault-finding-hero.jpg` | `james-inspecting-consumer-unit.webp` |
+| `electrical-fault-finding.jpg` | `led-lighting-driver-wiring-connections.webp` |
+| `electrical-fault-finding-detail.jpg` | `modern-consumer-unit-circuit-breakers.webp` |
+| `conduit-containment-hero.jpg` | `commercial-ceiling-cable-tray-installation.webp` |
+| `conduit-containment.jpg` | `electrical-control-panel-cable-wiring.webp` |
+| `project-1.jpg` | `vaulted-ceiling-led-strip-pendant-lighting.webp` |
+| `project-2.jpg` | `electrical-control-box-wiring-terminations.webp` |
+| `project-3.jpg` | `residential-renovation-project-exterior.webp` |
+| `project-4.jpg` | `vaulted-ceiling-recessed-spotlights.webp` |
+| `project-5.jpg` | `electrical-control-panel-cable-wiring.webp` |
+| `project-6.jpg` | `commercial-ceiling-cable-tray-installation.webp` |
