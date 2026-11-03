@@ -116,7 +116,7 @@ page("01-home.html", "Home", "(front page)", "-", "Electrician in Poole & Dorset
      J(hero("Trusted Electrician in <em>Poole</em> &amp; Dorset",
             "Reliable, safety-focused electrical installations for homes, businesses and farms across Poole, Bournemouth and Christchurch.",
             home_hero, "Electrician at work in Poole, Dorset - J.W Electrical Installations",
-            badge="Domestic, Commercial &amp; Agricultural", ctas=[QUOTE_BTN()]),
+            badge="Domestic, Commercial &amp; Agricultural", pos="center 22%", ctas=[QUOTE_BTN()]) + "\n<style>@media(max-width:768px){.bp-hero-bg{background-position:80% 20%!important}}</style>",
        circles([svc("domestic-electrician"), svc("commercial-electrician"), svc("house-rewiring"), svc("lighting-installation")]),
        intro([f"J.W Electrical Installations is an electrician based in Poole, covering Bournemouth, Christchurch and the wider Dorset area. We carry out {L('domestic-electrician','domestic')}, {L('commercial-electrician','commercial and industrial')} and {L('agricultural-electrician','agricultural')} electrical work, with a focus on safety, efficiency and practical solutions.",
               f"From {L('additional-sockets','additional sockets')} and {L('lighting-installation','lighting upgrades')} to {L('house-rewiring','full rewires')} and {L('electrical-fault-finding','fault finding')}, no job is too big or too small. {L('services','View all our services')}."],

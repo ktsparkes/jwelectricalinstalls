@@ -82,10 +82,10 @@ def sticky(form_href=None):
 
 
 # ---------- HEROES ----------
-def hero(h1, sub, image, alt, badge=None, ctas=None, crumb=None, loc=False, use_img=False):
+def hero(h1, sub, image, alt, badge=None, ctas=None, crumb=None, loc=False, use_img=False, pos=None):
     ctas = ctas or [QUOTE_BTN(), btn(U("services"), "All Services", "secondary")]
     bg = (f'<img class="bp-hero-bg" src="{image}" alt="{alt}" fetchpriority="high">' if use_img else
-          f'<div class="bp-hero-bg" role="img" aria-label="{alt}" style="background-image:url(\'{image}\')"></div>')
+          f'<div class="bp-hero-bg" role="img" aria-label="{alt}" style="background-image:url(\'{image}\'){';background-position:'+pos if pos else ''}"></div>')
     b = f'\n    <div class="bp-hero-badge">{badge}</div>' if badge else ""
     c = f'\n    <p class="bp-hero-crumb"><a href="{U()}">Home</a> &nbsp;/&nbsp; {crumb}</p>' if crumb else ""
     return f'''<section class="bp-hero{' bp-hero--loc' if loc else ''}" aria-labelledby="hero-heading">
