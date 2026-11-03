@@ -32,6 +32,7 @@ AREAS = [  # (label, slug)
 UPLOADED = "/wp-content/uploads/2026/11/"
 SOCK = "Clutter-free-room-with-matte-black-sockets.png"
 PHOTOS = {
+    "jw-electrical-logo.png": "Transparent-JV-electrical-logo-cutout.png",
     "electrician-poole-dorset-hero.jpg": "james-outdoor-standing-hero.webp",
     "james-watton-jw-electrical.jpg": "james-arms-crossed-original-best.webp",
     "james-watton-about.jpg": "james-about-portrait-black-tshirt.webp",

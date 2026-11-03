@@ -5,7 +5,7 @@ Photos live in `/wp-content/uploads/2026/11/` (uploaded November 2026). Pages al
 ## Still needed
 | Slot | What it's for |
 |---|---|
-| `jw-electrical-logo.png` | Logo (also upload in BeTheme Theme Options > Header > Logo). PNG with transparent background, at least 600px wide. |
+
 
 ## Stand-ins to replace when better photos arrive
 Upload the new photo, then tell Claude the filename and which slot it fills.
@@ -31,6 +31,7 @@ Upload the new photo, then tell Claude the filename and which slot it fills.
 ## Done
 | Slot | Photo |
 |---|---|
+| `jw-electrical-logo.png` | `Transparent-JV-electrical-logo-cutout.png` |
 | `electrician-poole-dorset-hero.jpg` | `james-outdoor-standing-hero.webp` |
 | `james-watton-jw-electrical.jpg` | `james-arms-crossed-original-best.webp` |
 | `james-watton-about.jpg` | `james-about-portrait-black-tshirt.webp` |
