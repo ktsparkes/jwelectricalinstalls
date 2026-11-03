@@ -53,6 +53,8 @@ PAGES = []  # registry for SEO.md
 
 
 def finalise(s):
+    s = re.sub(r'<img[^>]*src="MISSING"[^>]*>', '', s)
+    s = re.sub(r"background-image:url\('MISSING'\);?", "", s)
     s = s.replace("bp-", "jw-").replace("bpSlideUp", "jwSlideUp").replace("bpFadeIn", "jwFadeIn").replace("bpPulse", "jwPulse")
     s = s.replace("—", "-").replace("–", "-")  # no em/en dashes anywhere
     return s

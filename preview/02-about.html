@@ -109,6 +109,8 @@ img.jw-hero-bg{width:100%;height:100%;object-fit:cover;max-width:none}
 .jw-overview-inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:84px;align-items:center;position:relative}
 .jw-split-img{border-radius:20px;overflow:hidden;box-shadow:var(--jw-shadow-lg);background:var(--jw-pale)}
 .jw-split-img img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/3}
+.jw-split-img:empty{display:none}
+.jw-overview-inner:has(.jw-split-img:empty){grid-template-columns:1fr;max-width:900px}
 .jw-overview .jw-split-img{background:#2a2a2a}
 .jw-overview .jw-section-label{color:var(--jw-primary-light)}
 .jw-overview h2{font-weight:800;font-size:clamp(2.2rem,4vw,3.4rem);color:#fff;line-height:1.12;margin:0 0 24px;letter-spacing:-.03em}
@@ -292,7 +294,7 @@ img.jw-hero-bg{width:100%;height:100%;object-fit:cover;max-width:none}
         <div class="jw-service-card-body"><h3>Commercial &amp; Industrial Electrician</h3><p>Power, lighting and containment for shops, offices, workshops and industrial units.</p><span>Learn more &rarr;</span></div>
       </a>
       <a href="06-agricultural-electrician.html" class="jw-service-card scale-in delay-3">
-        <div class="jw-service-card-img" role="img" aria-label="Agricultural Electrician by J.W Electrical in Poole, Dorset" style="background-image:url('img/industrial-fused-isolator-power-sockets.webp')"></div>
+        <div class="jw-service-card-img" role="img" aria-label="Agricultural Electrician by J.W Electrical in Poole, Dorset" style=""></div>
         <div class="jw-service-card-body"><h3>Agricultural Electrician</h3><p>Lighting, power and containment for barns, stables, workshops and farm buildings.</p><span>Learn more &rarr;</span></div>
       </a>
       <a href="07-house-rewiring.html" class="jw-service-card scale-in delay-1">
@@ -312,7 +314,7 @@ img.jw-hero-bg{width:100%;height:100%;object-fit:cover;max-width:none}
         <div class="jw-service-card-body"><h3>Cabling &amp; Fault Finding</h3><p>Tripping circuits and faulty electrics traced and fixed, plus new cable installation.</p><span>Learn more &rarr;</span></div>
       </a>
       <a href="11-electric-heating.html" class="jw-service-card scale-in delay-2">
-        <div class="jw-service-card-img" role="img" aria-label="Electric Heating and Controls by J.W Electrical in Poole, Dorset" style="background-image:url('img/vaulted-ceiling-led-strip-pendant-lighting.webp')"></div>
+        <div class="jw-service-card-img" role="img" aria-label="Electric Heating and Controls by J.W Electrical in Poole, Dorset" style=""></div>
         <div class="jw-service-card-body"><h3>Electric Heating &amp; Controls</h3><p>Electric heaters, towel rails, underfloor heating and controls installed.</p><span>Learn more &rarr;</span></div>
       </a>
       <a href="12-conduit-containment.html" class="jw-service-card scale-in delay-3">

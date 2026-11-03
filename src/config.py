@@ -32,7 +32,7 @@ AREAS = [  # (label, slug)
 UPLOADED = "/wp-content/uploads/2026/11/"
 SOCK = "Clutter-free-room-with-matte-black-sockets.png"
 PHOTOS = {
-    "jw-electrical-logo.png": "Transparent-JV-electrical-logo-cutout.png",
+    "jw-electrical-logo.png": "Transparent-Jw-electrical-logo-cutout.png",
     "electrician-poole-dorset-hero.jpg": "james-outdoor-standing-hero.webp",
     "james-watton-jw-electrical.jpg": "james-arms-crossed-original-best.webp",
     "james-watton-about.jpg": "james-about-portrait-black-tshirt.webp",
@@ -67,20 +67,4 @@ PHOTOS = {
     "project-6.jpg": "commercial-ceiling-cable-tray-installation.webp",
 }
 # Stand-ins: real photos used in slots that still need a better, specific photo. (slot: filename)
-STANDINS = {
-    "agricultural-electrician-hero.jpg": "james-outdoor-standing-hero.webp",
-    "agricultural-electrician.jpg": "industrial-fused-isolator-power-sockets.webp",
-    "agricultural-electrician-detail.jpg": "electrical-control-panel-cable-wiring.webp",
-    "electric-heating-hero.jpg": "james-inspecting-consumer-unit.webp",
-    "electric-heating.jpg": "vaulted-ceiling-led-strip-pendant-lighting.webp",
-    "electric-heating-detail.jpg": "modern-consumer-unit-circuit-breakers.webp",
-    "additional-sockets-detail.jpg": "kitchen-pendant-lighting-installation.webp",
-    "conduit-containment-detail.jpg": "industrial-fused-isolator-power-sockets.webp",
-    "electrician-poole.jpg": "kitchen-pendant-lighting-installation.webp",
-    "electrician-bournemouth.jpg": "vaulted-ceiling-recessed-spotlights.webp",
-    "electrician-christchurch.jpg": "james-installing-ceiling-light.webp",
-    "electrician-wimborne.jpg": "house-rewiring-first-fix-cables.webp",
-    "electrician-ferndown.jpg": "commercial-ceiling-cable-tray-installation.webp",
-    "electrician-broadstone.jpg": "james-installing-black-socket.webp",
-    "electrician-dorset.jpg": "james-first-fix-rewiring.webp",
-}
+STANDINS = {}  # no stand-ins: slots without a real photo are left blank

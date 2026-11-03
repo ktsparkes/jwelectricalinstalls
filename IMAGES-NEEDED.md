@@ -5,33 +5,33 @@ Photos live in `/wp-content/uploads/2026/11/` (uploaded November 2026). Pages al
 ## Still needed
 | Slot | What it's for |
 |---|---|
-
+| `agricultural-electrician-hero.jpg` | Agricultural Electrician page - wide hero photo (landscape, 1920px wide). Ideally James on a agricultural electrician job. |
+| `agricultural-electrician.jpg` | Agricultural Electrician - card/circle photo and "Systems" section (4:3, 1200px wide). |
+| `agricultural-electrician-detail.jpg` | Agricultural Electrician - close-up detail of finished work (4:3, 1200px wide). |
+| `additional-sockets-detail.jpg` | Additional Sockets and Power Points - close-up detail of finished work (4:3, 1200px wide). |
+| `electric-heating-hero.jpg` | Electric Heating and Controls page - wide hero photo (landscape, 1920px wide). Ideally James on a electric heating and controls job. |
+| `electric-heating.jpg` | Electric Heating and Controls - card/circle photo and "Systems" section (4:3, 1200px wide). |
+| `electric-heating-detail.jpg` | Electric Heating and Controls - close-up detail of finished work (4:3, 1200px wide). |
+| `conduit-containment-detail.jpg` | Conduit and Containment - close-up detail of finished work (4:3, 1200px wide). |
+| `electrician-poole.jpg` | Poole page hero - a recognisable Poole scene or a local job photo (landscape, 1920px wide). Use your own/licensed photos only. |
+| `electrician-bournemouth.jpg` | Bournemouth page hero - a recognisable Bournemouth scene or a local job photo (landscape, 1920px wide). Use your own/licensed photos only. |
+| `electrician-christchurch.jpg` | Christchurch page hero - a recognisable Christchurch scene or a local job photo (landscape, 1920px wide). Use your own/licensed photos only. |
+| `electrician-wimborne.jpg` | Wimborne page hero - a recognisable Wimborne scene or a local job photo (landscape, 1920px wide). Use your own/licensed photos only. |
+| `electrician-ferndown.jpg` | Ferndown page hero - a recognisable Ferndown scene or a local job photo (landscape, 1920px wide). Use your own/licensed photos only. |
+| `electrician-broadstone.jpg` | Broadstone page hero - a recognisable Broadstone scene or a local job photo (landscape, 1920px wide). Use your own/licensed photos only. |
+| `electrician-dorset.jpg` | Dorset page hero - a recognisable Dorset scene or a local job photo (landscape, 1920px wide). Use your own/licensed photos only. |
 
 ## Stand-ins to replace when better photos arrive
 Upload the new photo, then tell Claude the filename and which slot it fills.
 
 | Slot | Currently using |
 |---|---|
-| `agricultural-electrician-hero.jpg` | `james-outdoor-standing-hero.webp` |
-| `agricultural-electrician.jpg` | `industrial-fused-isolator-power-sockets.webp` |
-| `agricultural-electrician-detail.jpg` | `electrical-control-panel-cable-wiring.webp` |
-| `electric-heating-hero.jpg` | `james-inspecting-consumer-unit.webp` |
-| `electric-heating.jpg` | `vaulted-ceiling-led-strip-pendant-lighting.webp` |
-| `electric-heating-detail.jpg` | `modern-consumer-unit-circuit-breakers.webp` |
-| `additional-sockets-detail.jpg` | `kitchen-pendant-lighting-installation.webp` |
-| `conduit-containment-detail.jpg` | `industrial-fused-isolator-power-sockets.webp` |
-| `electrician-poole.jpg` | `kitchen-pendant-lighting-installation.webp` |
-| `electrician-bournemouth.jpg` | `vaulted-ceiling-recessed-spotlights.webp` |
-| `electrician-christchurch.jpg` | `james-installing-ceiling-light.webp` |
-| `electrician-wimborne.jpg` | `house-rewiring-first-fix-cables.webp` |
-| `electrician-ferndown.jpg` | `commercial-ceiling-cable-tray-installation.webp` |
-| `electrician-broadstone.jpg` | `james-installing-black-socket.webp` |
-| `electrician-dorset.jpg` | `james-first-fix-rewiring.webp` |
+
 
 ## Done
 | Slot | Photo |
 |---|---|
-| `jw-electrical-logo.png` | `Transparent-JV-electrical-logo-cutout.png` |
+| `jw-electrical-logo.png` | `Transparent-Jw-electrical-logo-cutout.png` |
 | `electrician-poole-dorset-hero.jpg` | `james-outdoor-standing-hero.webp` |
 | `james-watton-jw-electrical.jpg` | `james-arms-crossed-original-best.webp` |
 | `james-watton-about.jpg` | `james-about-portrait-black-tshirt.webp` |

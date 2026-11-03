@@ -10,9 +10,7 @@ def img(name, desc=""):
         IMAGES.setdefault(name, desc)
     if name in PHOTOS:
         return UPLOADED + PHOTOS[name]
-    if name in STANDINS:
-        return UPLOADED + STANDINS[name]
-    return UPLOADS + name
+    return "MISSING"
 
 
 def U(slug=""):
